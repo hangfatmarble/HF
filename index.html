@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>恆發雲石工程有限公司 | 40年專業雲石工程、供應與翻新</title>
+<style>
+/* 全局樣式 */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+scroll-behavior: smooth;
+}
+
+body {
+background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(245,245,245,0.92)),
+url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop');
+background-size: cover;
+background-attachment: fixed;
+color: #2b2b2b;
+line-height: 1.6;
+}
+
+/* 搬遷公告條 */
+.relocation-notice {
+background-color: #d4af37;
+color: #111;
+text-align: center;
+padding: 10px 15px;
+font-weight: bold;
+font-size: 0.95rem;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 導覽列 */
+header {
+background-color: rgba(18, 18, 18, 0.95);
+color: #fff;
+padding: 15px 5%;
+position: sticky;
+top: 0;
+z-index: 1000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+backdrop-filter: blur(5px);
+}
+
+.logo {
+font-size: 1.4rem;
+font-weight: bold;
+color: #d4af37;
+display: flex;
+align-items: center;
+gap: 10px;
+letter-spacing: 1px;
+}
+
+.logo-circle {
+border: 2px solid #d4af37;
+border-radius: 50%;
+width: 38px;
+height: 38px;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+font-size: 0.9rem;
+font-weight: 800;
+}
+
+nav a {
+color: #e0e0e0;
+text-decoration: none;
+margin-left: 20px;
+font-size: 0.95rem;
+transition: color 0.3s;
+}
+
+nav a:hover {
+color: #d4af37;
+}
+
+/* 主橫幅 Section */
+.hero {
+text-align: center;
+padding: 90px 20px;
+background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop');
+background-size: cover;
+background-position: center;
+color: #fff;
+}
+
+.hero .badge {
+display: inline-block;
+background: #d4af37;
+color: #111;
+padding: 6px 18px;
+font-weight: bold;
+border-radius: 20px;
+margin-bottom: 20px;
+font-size: 0.95rem;
+letter-spacing: 1px;
+}
+
+.hero h1 {
+font-size: 2.6rem;
+margin-bottom: 15px;
+color: #fceea7;
+text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+font-size: 1.2rem;
+margin-bottom: 30px;
+color: #ddd;
+}
+
+.btn-group {
+display: flex;
+gap: 15px;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.btn-call {
+background: #25d366;
+color: #fff;
+padding: 12px 28px;
+text-decoration: none;
+border-radius: 6px;
+font-weight: bold;
+font-size: 1.05rem;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+transition: transform 0.2s, background 0.3s;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+}
+
+.btn-call:hover {
+background: #20ba5a;
+transform: translateY(-2px);
+}
+
+.btn-email {
+background: #d4af37;
+color: #111;
+padding: 12px 28px;
+text-decoration: none;
+border-radius: 6px;
+font-weight: bold;
+font-size: 1.05rem;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+transition: transform 0.2s, background 0.3s;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+}
+
+.btn-email:hover {
+background: #c29d2b;
+transform: translateY(-2px);
+}
+
+/* 區塊容器 */
+.container {
+max-width: 1140px;
+margin: 50px auto;
+padding: 0 20px;
+}
+
+.section-title {
+text-align: center;
+font-size: 2.1rem;
+margin-bottom: 35px;
+color: #111;
+position: relative;
+font-weight: 700;
+}
+
+.section-title::after {
+content: '';
+display: block;
+width: 70px;
+height: 3.5px;
+background: #d4af37;
+margin: 12px auto 0;
+border-radius: 2px;
+}
+
+/* 關於我們 / 優勢 */
+.about-box {
+background: rgba(255, 255, 255, 0.95);
+padding: 40px 30px;
+border-radius: 12px;
+box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+margin-bottom: 50px;
+text-align: center;
+border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.about-box p {
+font-size: 1.1rem;
+max-width: 900px;
+margin: 0 auto;
+color: #444;
+}
+
+.highlights {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+margin-top: 30px;
+gap: 20px;
+}
+
+.highlight-item {
+flex: 1;
+min-width: 220px;
+padding: 20px 15px;
+background: #fafafa;
+border-radius: 8px;
+border-bottom: 3px solid #d4af37;
+}
+
+.highlight-item h4 {
+color: #d4af37;
+font-size: 1.6rem;
+margin-bottom: 5px;
+}
+
+/* 門市圖片展示牆 */
+.store-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 20px;
+margin-bottom: 50px;
+}
+
+.store-card {
+background: #fff;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+border: 1px solid #eee;
+}
+
+.store-card img {
+width: 100%;
+height: 220px;
+object-fit: cover;
+display: block;
+}
+
+.store-card p {
+padding: 12px 15px;
+font-size: 0.95rem;
+font-weight: bold;
+color: #333;
+text-align: center;
+background: #fafafa;
+}
+
+/* 營業範圍卡片 */
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px;
+margin-bottom: 60px;
+}
+
+.service-card {
+background: rgba(255, 255, 255, 0.95);
+padding: 30px 25px;
+border-radius: 10px;
+box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+border-top: 5px solid #d4af37;
+transition: transform 0.3s;
+}
+
+.service-card:hover {
+transform: translateY(-5px);
+}
+
+.service-card h3 {
+margin-bottom: 15px;
+color: #111;
+font-size: 1.25rem;
+}
+
+.service-card ul {
+list-style-type: none;
+padding-left: 0;
+}
+
+.service-card ul li {
+margin-bottom: 10px;
+position: relative;
+padding-left: 22px;
+color: #555;
+font-size: 0.98rem;
+}
+
+.service-card ul li::before {
+content: '✔';
+position: absolute;
+left: 0;
+color: #d4af37;
+font-weight: bold;
+}
+
+/* 精選工程案例展示牆 */
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 25px;
+margin-bottom: 60px;
+}
+
+.gallery-card {
+background: #fff;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+display: flex;
+flex-direction: column;
+border: 1px solid #eee;
+}
+
+.gallery-card img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+border-bottom: 3px solid #d4af37;
+}
+
+.gallery-content {
+padding: 20px;
+flex-grow: 1;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.gallery-content h3 {
+font-size: 1.2rem;
+color: #111;
+margin-bottom: 8px;
+}
+
+.gallery-content p {
+color: #666;
+font-size: 0.95rem;
+line-height: 1.5;
+}
+
+.gallery-tag {
+align-self: flex-start;
+background: #f4ece1;
+color: #8c6d1f;
+font-size: 0.8rem;
+padding: 3px 10px;
+border-radius: 4px;
+margin-bottom: 10px;
+font-weight: bold;
+}
+
+/* 聯絡我們 */
+.contact-box {
+background: #1a1a1a;
+color: #fff;
+padding: 45px 35px;
+border-radius: 12px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 40px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+border-left: 6px solid #d4af37;
+}
+
+.contact-info h3 {
+color: #d4af37;
+margin-bottom: 20px;
+font-size: 1.5rem;
+}
+
+.contact-info p {
+margin-bottom: 14px;
+font-size: 1.05rem;
+display: flex;
+align-items: flex-start;
+gap: 10px;
+}
+
+.contact-info a {
+color: #fceea7;
+text-decoration: none;
+}
+
+.contact-info a:hover {
+text-decoration: underline;
+}
+
+.address-alert {
+background: rgba(212, 175, 55, 0.15);
+border: 1px dashed #d4af37;
+padding: 12px;
+border-radius: 6px;
+margin-bottom: 18px;
+font-size: 0.98rem;
+}
+
+/* 表單 */
+.contact-form h3 {
+color: #d4af37;
+margin-bottom: 20px;
+font-size: 1.5rem;
+}
+
+.form-group {
+margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 12px;
+border-radius: 6px;
+border: 1px solid #444;
+background: #2b2b2b;
+color: #fff;
+font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: #d4af37;
+}
+
+.btn-submit {
+background: #d4af37;
+color: #111;
+border: none;
+padding: 12px 30px;
+font-weight: bold;
+font-size: 1rem;
+border-radius: 6px;
+cursor: pointer;
+width: 100%;
+transition: background 0.3s;
+}
+
+.btn-submit:hover {
+background: #c29d2b;
+}
+
+/* 頁腳 */
+footer {
+text-align: center;
+padding: 25px;
+background: #111;
+color: #888;
+font-size: 0.9rem;
+margin-top: 60px;
+border-top: 1px solid #222;
+}
+
+/* 響應式微調 */
+@media (max-width: 768px) {
+header {
+flex-direction: column;
+gap: 12px;
+}
+nav a {
+margin: 0 10px;
+}
+.hero h1 {
+font-size: 1.9rem;
+}
+.contact-box {
+padding: 30px 20px;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- 搬遷特別提醒公告 -->
+<div class="relocation-notice">
+📢 搬遷啟示：本公司將於 10 月遷往新地址「元朗合益路 69 號金堂樓地下」（原舊址：元朗合益路 68 號），歡迎舊雨新知光臨！
+</div>
+
+<!-- 頁首導覽列 -->
+<header>
+<div class="logo">
+<span class="logo-circle">HF</span> 恆發雲石工程有限公司
+</div>
+<nav>
+<a href="#about">關於我們</a>
+<a href="#store">實體門市</a>
+<a href="#services">營業範圍</a>
+<a href="#gallery">工程案例</a>
+<a href="#contact">聯絡我們</a>
+</nav>
+</header>
+
+<!-- 主頁面 Banner -->
+<section class="hero">
+<div class="badge">香港雲石建築工程｜超過 40 年在地經驗</div>
+<h1>專業雲石供應、精緻安裝與翻新護理</h1>
+<p>自設門市及廠房 · 訂造最快 2-3 日起貨 · 以至誠服務換長久往來</p>
+<div class="btn-group">
+<a href="https://wa.me/85260389474" class="btn-call" target="_blank">💬 WhatsApp 諮詢 (60389474)</a>
+<a href="mailto:hfltd@yahoo.com.hk" class="btn-email">✉️ 電郵查詢</a>
+</div>
+</section>
+
+<div class="container">
+
+<!-- 關於我們 -->
+<section id="about" class="about-box">
+<h2 class="section-title">關於恆發雲石</h2>
+<p>我們深耕香港建築石材領域四十餘載，自設專業廠房與實體門市，為客戶提供由現場上門度尺、石材批發零售、精細對紋切割加工，到專業現場施工與後期晶面護理的一站式服務。</p>
+
+<div class="highlights">
+<div class="highlight-item">
+<h4>40+ 年</h4>
+<p>在地豐富工程經驗</p>
+</div>
+<div class="highlight-item">
+<h4>2-3 日</h4>
+<p>訂造最快起貨</p>
+</div>
+<div class="highlight-item">
+<h4>一站式</h4>
+<p>門市、廠房、安裝護理</p>
+</div>
+</div>
+</section>
+
+<!-- 實體門市展示 -->
+<section id="store">
+<h2 class="section-title">門市環境與石材展示</h2>
+<div class="store-grid">
+<div class="store-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/store-front.jpg" alt="恆發雲石元朗門市外觀">
+<p>元朗門市地舖外觀及石材展板</p>
+</div>
+<div class="store-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/marble-samples-1.jpg" alt="門市內部天然雲石與岩板樣板展架">
+<p>精選天然雲石、岩板與人造石樣板</p>
+</div>
+<div class="store-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/marble-samples-2.jpg" alt="門市豐富石材色彩選擇">
+<p>多樣化石材色彩與表面處理供親臨挑選</p>
+</div>
+<div class="store-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/store-logo.jpg" alt="恆發雲石品牌牌匾">
+<p>40 年老字號 · 誠信品質保證</p>
+</div>
+</div>
+</section>
+
+<!-- 營業範圍 -->
+<section id="services">
+<h2 class="section-title">核心營業範圍</h2>
+
+<div class="services-grid">
+<div class="service-card">
+<h3>1. 上門度尺與專業送貨</h3>
+<ul>
+<li>專人現場精密上門度尺</li>
+<li>超額訂單提供專業包送貨服務</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h3>2. 石材零售與工程輔料</h3>
+<ul>
+<li>零售各式天然雲石、麻石與瓷磚</li>
+<li>雲石麻石瓷磚界碟供應</li>
+<li>專業防水防污處理解決方案</li>
+<li>外牆乾掛易波仕膠水、雲石專用膠水</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h3>3. 內外牆與地台工程</h3>
+<ul>
+<li>豪宅及村屋內外牆石材鋪設工程</li>
+<li>大中小型地台雲石鋪設與修飾</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h3>4. 廚房、浴室與細部工程</h3>
+<ul>
+<li>整套廚房牆面、櫥櫃及檯面雲石工程</li>
+<li>浴室牆面、浴缸包邊及洗手台</li>
+<li>門檻、窗檯雲石及收口門精細工程</li>
+</ul>
+</div>
+
+<div class="service-card">
+<h3>5. 地台雲石翻新護理</h3>
+<ul>
+<li>舊雲石地台打磨與拋光工程</li>
+<li>專業雲石晶面護理與石材修復</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- 工程案例展示 -->
+<section id="gallery">
+<h2 class="section-title">精選工程與工藝展示</h2>
+
+<div class="gallery-grid">
+
+<!-- 案例 1 -->
+<div class="gallery-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/tv-wall.jpg" alt="客廳連紋大理石電視背景牆">
+<div class="gallery-content">
+<div>
+<span class="gallery-tag">客廳室內設計</span>
+<h3>客廳連紋大理石電視背景牆</h3>
+<p>採用高質感爵士白/卡拉拉白天然大理石，精密對紋拼接，連貫飄窗檯面，營造大氣現代奢華感。</p>
+</div>
+</div>
+</div>
+
+<!-- 案例 2 -->
+<div class="gallery-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/terrazzo-shelf.jpg" alt="水磨石/水波紋收納展示櫃">
+<div class="gallery-content">
+<div>
+<span class="gallery-tag">訂製展示櫃</span>
+<h3>水磨石/水波紋壁龕收納展櫃</h3>
+<p>全包覆式水磨石藝術紋理展示櫃，細緻導角修邊，展現質感家居品味。</p>
+</div>
+</div>
+</div>
+
+<!-- 案例 3 -->
+<div class="gallery-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/sofa-wall.jpg" alt="客廳電視牆與沙發背牆整體設計">
+<div class="gallery-content">
+<div>
+<span class="gallery-tag">整體牆面工程</span>
+<h3>全屋客廳石材飾面工程</h3>
+<p>自然大理石紋理背牆，完美配合現代家居軟裝與採光設計。</p>
+</div>
+</div>
+</div>
+
+<!-- 案例 4 -->
+<div class="gallery-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/stone-plaque.jpg" alt="精雕紅字回紋石雕門牌「長江」">
+<div class="gallery-content">
+<div>
+<span class="gallery-tag">石雕工藝</span>
+<h3>精雕紅字回紋石雕門牌「長江」</h3>
+<p>傳統古典回紋邊框搭配精雕紅漆大字，工藝湛深，適合豪宅、村屋及門牌牌匾。</p>
+</div>
+</div>
+</div>
+
+<!-- 案例 5 -->
+<div class="gallery-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/bathtub.jpg" alt="浴室雲石牆面與浴缸包邊">
+<div class="gallery-content">
+<div>
+<span class="gallery-tag">浴室工程</span>
+<h3>浴室雲石牆面與浴缸包邊</h3>
+<p>高級柔和紋理雲石搭配精密防水封邊，打造酒店級舒適淋浴空間。</p>
+</div>
+</div>
+</div>
+
+<!-- 案例 6 -->
+<div class="gallery-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/vanity.jpg" alt="水磨石風格洗手台面">
+<div class="gallery-content">
+<div>
+<span class="gallery-tag">洗手台工程</span>
+<h3>水磨石風格洗手台面工程</h3>
+<p>水磨石花紋洗手檯面，耐磨防污，搭配木紋浴室櫃，融合現代與復古美感。</p>
+</div>
+</div>
+</div>
+
+<!-- 案例 7 -->
+<div class="gallery-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/window-sill.jpg" alt="雲石窗檯面施工現場">
+<div class="gallery-content">
+<div>
+<span class="gallery-tag">窗檯與細部</span>
+<h3>雲石窗檯面精密鋪設現場</h3>
+<p>精準度尺與修邊施工，高亮澤感雲石窗檯，防水耐用且易於清潔。</p>
+</div>
+</div>
+</div>
+
+<!-- 案例 8 -->
+<div class="gallery-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/luxury-hall.jpg" alt="豪宅大樓黑金雲石柱身與典雅大廳">
+<div class="gallery-content">
+<div>
+<span class="gallery-tag">豪宅大廳工程</span>
+<h3>黑金大理石柱身與藝術石材壁畫</h3>
+<p>黑金雙色大理石包柱，搭配藝術石材壁畫，展現頂級豪宅與會所之尊貴氣派。</p>
+</div>
+</div>
+</div>
+
+<!-- 案例 9 -->
+<div class="gallery-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/exterior-wall.jpg" alt="建築外牆花崗岩/麻石乾掛工程">
+<div class="gallery-content">
+<div>
+<span class="gallery-tag">外牆乾掛工程</span>
+<h3>建築外牆花崗岩/麻石乾掛工程</h3>
+<p>大型建築與村屋外牆乾掛石材工程，嚴格把關結構安全與耐候防潮效果。</p>
+</div>
+</div>
+</div>
+
+<!-- 案例 10 -->
+<div class="gallery-card">
+<img src="https://raw.githubusercontent.com/hangfatmarble/assets/main/marble-floor.jpg" alt="木紋質感大理石地台鋪設">
+<div class="gallery-content">
+<div>
+<span class="gallery-tag">地台鋪設與拋光</span>
+<h3>木紋質感天然大理石地台</h3>
+<p>天然木紋大理石地台無縫鋪設，經過精密打磨與晶面拋光，光澤平整度極佳。</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- 聯絡我們與查詢表格 -->
+<section id="contact">
+<div class="contact-box">
+<div class="contact-info">
+<h3>聯絡我們 / 光臨洽談</h3>
+
+<div class="address-alert">
+<strong>📍 新地址（10月搬遷）：</strong><br>
+新界元朗合益路69號金堂樓地下<br>
+<span style="font-size: 0.88rem; color: #bbb;">(原舊址：元朗合益路68號)</span>
+</div>
+
+<p>☎️ <strong>門市電話：</strong> <a href="tel:85222530490">(852) 2253 0490</a></p>
+<p>📱 <strong>手提/WhatsApp：</strong> <a href="https://wa.me/85260389474" target="_blank">(852) 6038 9474</a></p>
+<p>📱 <strong>備用聯絡：</strong> <a href="tel:85293109093">(852) 9310 9093</a></p>
+<p>✉️ <strong>電郵地址：</strong> <a href="mailto:hfltd@yahoo.com.hk">hfltd@yahoo.com.hk</a></p>
+<p>📸 <strong>Instagram：</strong> hangfatmarble.hk</p>
+
+<p style="margin-top: 25px; color: #d4af37; font-style: italic; font-size: 0.98rem;">
+如有任何雲石裝修、度尺或工程查詢，歡迎隨時聯絡我們或親臨門市洽談！
+</p>
+</div>
+
+<div class="contact-form">
+<h3>線上工程查詢</h3>
+<form action="mailto:hfltd@yahoo.com.hk" method="post" enctype="text/plain">
+<div class="form-group">
+<input type="text" name="姓名" placeholder="您的姓名 / 稱呼" required>
+</div>
+<div class="form-group">
+<input type="tel" name="電話" placeholder="聯絡電話 / WhatsApp" required>
+</div>
+<div class="form-group">
+<input type="email" name="電郵" placeholder="您的電郵地址">
+</div>
+<div class="form-group">
+<textarea name="查詢內容" rows="4" placeholder="請簡單描述您的雲石工程需求（如：廚房檯面、地台翻新、村屋外牆等）" required></textarea>
+</div>
+<button type="submit" class="btn-submit">送出查詢表格</button>
+</form>
+</div>
+</div>
+</section>
+
+</div>
+
+<!-- 頁尾 -->
+<footer>
+<p>&copy; 2026 恆發雲石工程有限公司 Hang Fat Marble Engineering Co., Ltd. 版權所有</p>
+</footer>
+
+</body>
+</html>
