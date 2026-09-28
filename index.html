@@ -7,19 +7,19 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
-/* 網頁背景：透亮白雲石紋理（對應魚雪白/爵士白樣板） */
+/* 使用專屬白雲石相片做網頁背景 */
 body {
 background-color: #f8fafc;
 background-image:
-linear-gradient(rgba(255, 255, 255, 0.78), rgba(248, 250, 252, 0.88)),
-url('https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=1600&auto=format&fit=crop');
+linear-gradient(rgba(255, 255, 255, 0.72), rgba(248, 250, 252, 0.85)),
+url('bg-marble.jpg');
 background-size: cover;
 background-attachment: fixed;
 background-position: center;
 color: #0f172a;
 }
 
-/* 磨砂白玻璃卡片：確保文字與背景對比度極佳，字字清晰 */
+/* 磨砂白玻璃卡片 */
 .white-glass-card {
 background: rgba(255, 255, 255, 0.94);
 backdrop-filter: blur(12px);
@@ -175,7 +175,7 @@ scroll-behavior: smooth;
 </div>
 </section>
 
-<!-- 實體門市與樣板展示（對應您的真實照片） -->
+<!-- 實體門市與樣板展示 -->
 <section id="store" class="py-12">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="text-center max-w-3xl mx-auto mb-10">
@@ -255,7 +255,7 @@ scroll-behavior: smooth;
 </div>
 </section>
 
-<!-- 精選工程案例展示（完全符合您提供的7張工程照） -->
+<!-- 精選工程案例展示 -->
 <section id="cases" class="py-12">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="text-center max-w-3xl mx-auto mb-10">
@@ -264,81 +264,91 @@ scroll-behavior: smooth;
 <p class="text-slate-700 font-medium">展示恒發雲石近年完成的真實施工案例，品質看得見。</p>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 <!-- 案例 1 -->
 <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-1.jpg" alt="客廳背景牆" class="w-full h-64 object-cover">
-<div class="p-6">
+<img src="case-1.jpg" alt="客廳背景牆" class="w-full h-56 object-cover">
+<div class="p-5">
 <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">客廳牆面工程</span>
-<h3 class="text-lg font-bold text-slate-900 mb-2">客廳沙發背景牆與優雅石材飾面</h3>
-<p class="text-slate-600 text-sm leading-relaxed">採用高質感白大理石紋理背牆，精密收口對縫，搭配現代家居照明呈現大氣奢華風格。</p>
+<h3 class="text-base font-bold text-slate-900 mb-1">客廳沙發背景牆與石材飾面</h3>
+<p class="text-slate-600 text-xs leading-relaxed">高質感白大理石背牆與精密對縫。</p>
 </div>
 </div>
 
 <!-- 案例 2 -->
 <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-2.jpg" alt="長江精雕門牌" class="w-full h-64 object-cover">
-<div class="p-6">
+<img src="case-2.jpg" alt="長江精雕門牌" class="w-full h-56 object-cover">
+<div class="p-5">
 <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">石雕工藝</span>
-<h3 class="text-lg font-bold text-slate-900 mb-2">精雕紅字回紋石雕門牌「長江」</h3>
-<p class="text-slate-600 text-sm leading-relaxed">傳統古典回紋邊框搭配精雕紅漆大字，工藝深厚，適合豪宅村屋門牌與招牌。</p>
+<h3 class="text-base font-bold text-slate-900 mb-1">精雕紅字回紋石雕門牌「長江」</h3>
+<p class="text-slate-600 text-xs leading-relaxed">古典回紋邊框搭配精雕紅漆大字。</p>
 </div>
 </div>
 
 <!-- 案例 3 -->
 <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-3.jpg" alt="外牆乾掛工程" class="w-full h-64 object-cover">
-<div class="p-6">
+<img src="case-3.jpg" alt="外牆乾掛工程" class="w-full h-56 object-cover">
+<div class="p-5">
 <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">外牆石材</span>
-<h3 class="text-lg font-bold text-slate-900 mb-2">建築外牆花崗岩/麻石乾掛工程</h3>
-<p class="text-slate-600 text-sm leading-relaxed">大型建築與村屋外牆乾掛石材工程，嚴格把關結構安全與耐候防潮效果。</p>
+<h3 class="text-base font-bold text-slate-900 mb-1">建築外牆花崗岩/麻石乾掛工程</h3>
+<p class="text-slate-600 text-xs leading-relaxed">外牆乾掛鋼構，安全防潮耐候。</p>
 </div>
 </div>
 
 <!-- 案例 4 -->
 <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-4.jpg" alt="水磨石洗手台" class="w-full h-64 object-cover">
-<div class="p-6">
+<img src="case-4.jpg" alt="水磨石洗手台" class="w-full h-56 object-cover">
+<div class="p-5">
 <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">洗手台工程</span>
-<h3 class="text-lg font-bold text-slate-900 mb-2">水磨石風格洗手檯面工程</h3>
-<p class="text-slate-600 text-sm leading-relaxed">水磨石花紋洗手檯面，耐磨防污，搭配木紋浴室櫃，融合現代與復古美感。</p>
+<h3 class="text-base font-bold text-slate-900 mb-1">水磨石風格洗手檯面工程</h3>
+<p class="text-slate-600 text-xs leading-relaxed">耐磨防污水磨石搭配木紋浴室櫃。</p>
 </div>
 </div>
 
 <!-- 案例 5 -->
 <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-5.jpg" alt="浴室包邊工程" class="w-full h-64 object-cover">
-<div class="p-6">
+<img src="case-5.jpg" alt="浴室包邊工程" class="w-full h-56 object-cover">
+<div class="p-5">
 <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">浴室裝修</span>
-<h3 class="text-lg font-bold text-slate-900 mb-2">浴室牆面與浴缸石材包邊</h3>
-<p class="text-slate-600 text-sm leading-relaxed">高級柔和紋理雲石搭配精密防水封邊，打造酒店級舒適淋浴空間。</p>
+<h3 class="text-base font-bold text-slate-900 mb-1">浴室牆面與浴缸石材包邊</h3>
+<p class="text-slate-600 text-xs leading-relaxed">柔和雲石搭配防水封邊工藝。</p>
 </div>
 </div>
 
 <!-- 案例 6 -->
 <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-6.jpg" alt="窗檯面工程" class="w-full h-64 object-cover">
-<div class="p-6">
+<img src="case-6.jpg" alt="窗檯面工程" class="w-full h-56 object-cover">
+<div class="p-5">
 <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">窗檯細部</span>
-<h3 class="text-lg font-bold text-slate-900 mb-2">爵士白雲石窗檯面精細鋪設</h3>
-<p class="text-slate-600 text-sm leading-relaxed">現場精準度尺與修邊施工，高亮澤感雲石窗檯，防水耐用且易於清潔。</p>
+<h3 class="text-base font-bold text-slate-900 mb-1">爵士白雲石窗檯面精細鋪設</h3>
+<p class="text-slate-600 text-xs leading-relaxed">精準度尺與高亮澤感防水窗檯。</p>
 </div>
 </div>
 
 <!-- 案例 7 -->
 <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-7.jpg" alt="碎石紋水磨石櫃" class="w-full h-64 object-cover">
-<div class="p-6">
+<img src="case-7.jpg" alt="碎石紋水磨石櫃" class="w-full h-56 object-cover">
+<div class="p-5">
 <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">訂造展示櫃</span>
-<h3 class="text-lg font-bold text-slate-900 mb-2">水磨石碎石紋特色層架展示櫃</h3>
-<p class="text-slate-600 text-sm leading-relaxed">客製化碎石水磨石紋理包覆層架，質純堅固，展現居家與商業空間藝術品味。</p>
+<h3 class="text-base font-bold text-slate-900 mb-1">水磨石碎石紋特色層架展示櫃</h3>
+<p class="text-slate-600 text-xs leading-relaxed">客製化碎石紋包覆，展現藝術品味。</p>
+</div>
+</div>
+
+<!-- 案例 8 (新加入：黑金大理石包柱) -->
+<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<img src="case-8.jpg" alt="黑金大理石包柱工程" class="w-full h-56 object-cover">
+<div class="p-5">
+<span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">大堂/包柱工程</span>
+<h3 class="text-base font-bold text-slate-900 mb-1">黑金大理石柱身與藝術石牆</h3>
+<p class="text-slate-600 text-xs leading-relaxed">尊貴黑金雙色大理石包柱，展現大氣質感。</p>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<!-- 聯絡我們區塊（直連 WhatsApp，無諮詢表單） -->
+<!-- 聯絡我們區塊 -->
 <section id="contact" class="py-12">
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="white-glass-card p-8 sm:p-12 rounded-3xl border border-white text-center shadow-lg">
