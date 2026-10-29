@@ -1,771 +1,747 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>恒發雲石工程有限公司 | 40年專業雲石工程、供應與護理</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<style>
-/* 使用專屬白雲石相片做網頁背景 */
-body {
-background-color: #f8fafc;
-background-image:
-linear-gradient(rgba(255, 255, 255, 0.72), rgba(248, 250, 252, 0.85)),
-url('bg-marble.jpg');
-background-size: cover;
-background-attachment: fixed;
-background-position: center;
-color: #0f172a;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>恒發雲石工程有限公司 | 40年專業雲石工程、供應與護理</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 使用專屬白雲石相片做網頁背景 */
+        body {
+            background-color: #f8fafc;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.72), rgba(248, 250, 252, 0.85)),
+                url('bg-marble.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #0f172a;
+        }
 
-/* 磨砂白玻璃卡片 */
-.white-glass-card {
-background: rgba(255, 255, 255, 0.94);
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
-border: 1px solid rgba(255, 255, 255, 0.95);
-box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
-}
+        /* 磨砂白玻璃卡片 */
+        .white-glass-card {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+        }
 
-.white-glass-nav {
-background: rgba(255, 255, 255, 0.96);
-backdrop-filter: blur(16px);
--webkit-backdrop-filter: blur(16px);
-}
+        .white-glass-nav {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
 
-html {
-scroll-behavior: smooth;
-}
-</style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body class="font-sans antialiased min-h-screen flex flex-col justify-between">
 
-<!-- 頁首導航 -->
-<header class="sticky top-0 z-50 white-glass-nav border-b border-slate-200/80 shadow-sm">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center h-20 gap-4">
-<!-- HF Logo：紅字 + 白底 + 黑外框 -->
-<a href="#" class="flex items-center space-x-3 group shrink-0">
-<div class="w-12 h-12 rounded-full border-2 border-black bg-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
-<span class="text-red-600 font-extrabold text-xl tracking-tighter">HF</span>
-</div>
-<div class="hidden sm:block">
-<span class="block text-xl font-extrabold text-slate-900 tracking-wide">恒發雲石工程有限公司</span>
-<span class="block text-xs text-slate-500 font-medium tracking-wider">HANG FAT MARBLE ENGINEERING CO., LTD.</span>
-</div>
-</a>
+    <!-- 頁首導航 -->
+    <header class="sticky top-0 z-50 white-glass-nav border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 gap-4">
+                <!-- HF Logo：紅字 + 白底 + 黑外框 -->
+                <a href="#" class="flex items-center space-x-3 group shrink-0">
+                    <div class="w-12 h-12 rounded-full border-2 border-black bg-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
+                        <span class="text-red-600 font-extrabold text-xl tracking-tighter">HF</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="block text-xl font-extrabold text-slate-900 tracking-wide">恒發雲石工程有限公司</span>
+                        <span class="block text-xs text-slate-500 font-medium tracking-wider">HANG FAT MARBLE ENGINEERING CO., LTD.</span>
+                    </div>
+                </a>
 
-<!-- 導航選單 -->
-<nav class="hidden xl:flex items-center space-x-4 text-xs font-bold text-slate-700 shrink">
-<a href="#notice" class="hover:text-red-600 transition-colors whitespace-nowrap">搬遷啟示</a>
-<a href="#about" class="hover:text-red-600 transition-colors whitespace-nowrap">關於我們</a>
-<a href="#store" class="hover:text-red-600 transition-colors whitespace-nowrap">實體門市</a>
-<a href="#services" class="hover:text-red-600 transition-colors whitespace-nowrap">營業範圍</a>
-<a href="#stone-benefits" class="hover:text-red-600 transition-colors whitespace-nowrap">石材好處</a>
-<a href="#stone-edges" class="hover:text-red-600 transition-colors whitespace-nowrap">磨邊工藝</a>
-<a href="#cases" class="hover:text-red-600 transition-colors whitespace-nowrap">精選案例</a>
-<a href="#contact" class="hover:text-red-600 transition-colors whitespace-nowrap">聯絡我們</a>
-</nav>
+                <!-- 導航選單 -->
+                <nav class="hidden xl:flex items-center space-x-5 text-xs font-bold text-slate-700 shrink">
+                    <a href="#about" class="hover:text-red-600 transition-colors whitespace-nowrap">關於我們</a>
+                    <a href="#store" class="hover:text-red-600 transition-colors whitespace-nowrap">實體門市</a>
+                    <a href="#services" class="hover:text-red-600 transition-colors whitespace-nowrap">營業範圍</a>
+                    <a href="#stone-benefits" class="hover:text-red-600 transition-colors whitespace-nowrap">石材好處</a>
+                    <a href="#stone-edges" class="hover:text-red-600 transition-colors whitespace-nowrap">磨邊工藝</a>
+                    <a href="#cases" class="hover:text-red-600 transition-colors whitespace-nowrap">精選案例</a>
+                    <a href="#contact" class="hover:text-red-600 transition-colors whitespace-nowrap">聯絡我們</a>
+                </nav>
 
-<!-- 右側按鈕 -->
-<div class="hidden lg:flex items-center space-x-3 shrink-0 ml-auto xl:ml-4">
-<a href="https://wa.me/85260389474" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-full text-sm font-bold transition-colors shadow-sm whitespace-nowrap">
-<i class="fa-brands fa-whatsapp text-lg"></i>
-<span>WhatsApp 查詢</span>
-</a>
-<a href="tel:85222530490" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-red-600 text-white px-4 py-2.5 rounded-full text-sm font-bold transition-colors shadow-sm whitespace-nowrap">
-<i class="fa-solid fa-phone text-xs"></i>
-<span>(852) 2253 0490</span>
-</a>
-</div>
+                <!-- 右側按鈕 -->
+                <div class="hidden lg:flex items-center space-x-3 shrink-0 ml-auto xl:ml-4">
+                    <a href="https://wa.me/85260389474" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-full text-sm font-bold transition-colors shadow-sm whitespace-nowrap">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp 查詢</span>
+                    </a>
+                    <a href="tel:85222530490" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-red-600 text-white px-4 py-2.5 rounded-full text-sm font-bold transition-colors shadow-sm whitespace-nowrap">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        <span>(852) 2253 0490</span>
+                    </a>
+                </div>
 
-<!-- 手機版選單按鈕 -->
-<button id="menu-btn" class="xl:hidden text-slate-700 hover:text-red-600 focus:outline-none p-2 ml-auto">
-<i class="fa-solid fa-bars text-2xl"></i>
-</button>
-</div>
-</div>
+                <!-- 手機版選單按鈕 -->
+                <button id="menu-btn" class="xl:hidden text-slate-700 hover:text-red-600 focus:outline-none p-2 ml-auto">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
 
-<!-- 手機版/中等螢幕下拉選單 -->
-<div id="mobile-menu" class="hidden xl:hidden white-glass-nav border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
-<a href="#notice" class="block py-2 text-slate-700 font-bold hover:text-red-600">搬遷啟示</a>
-<a href="#about" class="block py-2 text-slate-700 font-bold hover:text-red-600">關於我們</a>
-<a href="#store" class="block py-2 text-slate-700 font-bold hover:text-red-600">實體門市</a>
-<a href="#services" class="block py-2 text-slate-700 font-bold hover:text-red-600">營業範圍</a>
-<a href="#stone-benefits" class="block py-2 text-slate-700 font-bold hover:text-red-600">石材好處</a>
-<a href="#stone-edges" class="block py-2 text-slate-700 font-bold hover:text-red-600">磨邊工藝</a>
-<a href="#cases" class="block py-2 text-slate-700 font-bold hover:text-red-600">精選案例</a>
-<a href="#contact" class="block py-2 text-slate-700 font-bold hover:text-red-600">聯絡我們</a>
-<div class="pt-2 flex flex-col gap-2">
-<a href="https://wa.me/85260389474" target="_blank" class="w-full text-center bg-emerald-600 text-white py-2.5 rounded-lg font-bold shadow-sm flex items-center justify-center gap-2">
-<i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp 查詢
-</a>
-<a href="tel:85222530490" class="w-full text-center bg-slate-900 text-white py-2.5 rounded-lg font-bold shadow-sm flex items-center justify-center gap-2">
-<i class="fa-solid fa-phone text-xs"></i> (852) 2253 0490
-</a>
-</div>
-</div>
-</header>
+        <!-- 手機版/中等螢幕下拉選單 -->
+        <div id="mobile-menu" class="hidden xl:hidden white-glass-nav border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-700 font-bold hover:text-red-600">關於我們</a>
+            <a href="#store" class="block py-2 text-slate-700 font-bold hover:text-red-600">實體門市</a>
+            <a href="#services" class="block py-2 text-slate-700 font-bold hover:text-red-600">營業範圍</a>
+            <a href="#stone-benefits" class="block py-2 text-slate-700 font-bold hover:text-red-600">石材好處</a>
+            <a href="#stone-edges" class="block py-2 text-slate-700 font-bold hover:text-red-600">磨邊工藝</a>
+            <a href="#cases" class="block py-2 text-slate-700 font-bold hover:text-red-600">精選案例</a>
+            <a href="#contact" class="block py-2 text-slate-700 font-bold hover:text-red-600">聯絡我們</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="https://wa.me/85260389474" target="_blank" class="w-full text-center bg-emerald-600 text-white py-2.5 rounded-lg font-bold shadow-sm flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp 查詢
+                </a>
+                <a href="tel:85222530490" class="w-full text-center bg-slate-900 text-white py-2.5 rounded-lg font-bold shadow-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone text-xs"></i> (852) 2253 0490
+                </a>
+            </div>
+        </div>
+    </header>
 
-<main class="flex-grow">
-<!-- Hero 主頁 Banner -->
-<section class="relative py-16 lg:py-24 overflow-hidden">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="max-w-3xl white-glass-card p-8 sm:p-12 rounded-3xl shadow-xl border border-white">
-<div class="inline-flex items-center gap-2 bg-amber-100 text-amber-900 border border-amber-300 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-<i class="fa-solid fa-award text-amber-700"></i> 香港雲石建築工程｜超過 40 年在地經驗
-</div>
-<h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
-專業雲石供應、精緻安裝<br><span class="text-red-600">與舊石打磨翻新護理</span>
-</h1>
-<p class="text-base sm:text-lg text-slate-700 font-medium leading-relaxed mb-8">
-自設門市及加工廠房 · 現場精密上門度尺 · 訂造最快 2-3 日起貨 · 以至誠服務換長久往來。
-</p>
-<div class="flex flex-wrap gap-4">
-<a href="https://wa.me/85260389474" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-7 py-4 rounded-2xl shadow-lg transition-all flex items-center gap-2.5 text-lg">
-<i class="fa-brands fa-whatsapp text-2xl"></i> WhatsApp 立即查詢 (60389474)
-</a>
-<a href="tel:85222530490" class="bg-slate-900 hover:bg-red-600 text-white font-bold px-6 py-4 rounded-2xl shadow-md transition-all flex items-center gap-2 text-lg">
-<i class="fa-solid fa-phone"></i> 致電門市 (2253 0490)
-</a>
-</div>
-</div>
-</div>
-</section>
+    <main class="flex-grow">
+        <!-- Hero 主頁 Banner -->
+        <section class="relative py-16 lg:py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl white-glass-card p-8 sm:p-12 rounded-3xl shadow-xl border border-white">
+                    <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-900 border border-amber-300 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                        <i class="fa-solid fa-award text-amber-700"></i> 香港雲石建築工程｜超過 40 年在地經驗
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                        專業雲石供應、精緻安裝<br><span class="text-red-600">與舊石打磨翻新護理</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-slate-700 font-medium leading-relaxed mb-8">
+                        自設門市及加工廠房 · 現場精密上門度尺 · 訂造最快 2-3 日起貨 · 以至誠服務換長久往來。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://wa.me/85260389474" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-7 py-4 rounded-2xl shadow-lg transition-all flex items-center gap-2.5 text-lg">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i> WhatsApp 立即查詢 (60389474)
+                        </a>
+                        <a href="tel:85222530490" class="bg-slate-900 hover:bg-red-600 text-white font-bold px-6 py-4 rounded-2xl shadow-md transition-all flex items-center gap-2 text-lg">
+                            <i class="fa-solid fa-phone"></i> 致電門市 (2253 0490)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- 10月搬遷啟示區塊 -->
-<section id="notice" class="py-6">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="white-glass-card bg-gradient-to-r from-amber-500/10 via-white to-red-500/10 border-l-8 border-amber-500 rounded-2xl p-6 shadow-md">
-<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-<div class="space-y-1">
-<div class="flex items-center gap-2 text-amber-800 font-extrabold text-lg">
-<i class="fa-solid fa-bullhorn text-xl"></i>
-<span>📢 搬遷啟示公告</span>
-</div>
-<p class="text-slate-900 font-bold leading-relaxed">
-本公司將於 10 月遷往新地址「元朗合益路 69 號金堂樓地下」（原舊址：元朗合益路 68 號），歡迎新舊客戶光臨！
-</p>
-</div>
-<a href="https://wa.me/85260389474" target="_blank" class="shrink-0 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors flex items-center gap-2">
-<i class="fa-brands fa-whatsapp text-base"></i> WhatsApp 專人對接
-</a>
-</div>
-</div>
-</div>
-</section>
+        <!-- 關於我們區塊 -->
+        <section id="about" class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="white-glass-card p-8 sm:p-12 rounded-3xl text-center shadow-lg border border-white">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">關於恒發雲石</h2>
+                    <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-6"></div>
+                    <p class="text-slate-700 font-medium max-w-4xl mx-auto text-base sm:text-lg leading-relaxed mb-8">
+                        我們深耕香港建築石材領域四十餘載，自設專業廠房與實體門市，為客戶提供由現場上門度尺、石材批發零售、精細對紋切割加工，到專業現場施工與後期晶面護理的一站式服務。
+                    </p>
 
-<!-- 關於我們區塊 -->
-<section id="about" class="py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="white-glass-card p-8 sm:p-12 rounded-3xl text-center shadow-lg border border-white">
-<h2 class="text-3xl font-bold text-slate-900 mb-4">關於恒發雲石</h2>
-<div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-6"></div>
-<p class="text-slate-700 font-medium max-w-4xl mx-auto text-base sm:text-lg leading-relaxed mb-8">
-我們深耕香港建築石材領域四十餘載，自設專業廠房與實體門市，為客戶提供由現場上門度尺、石材批發零售、精細對紋切割加工，到專業現場施工與後期晶面護理的一站式服務。
-</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                        <div class="p-6 bg-slate-50/90 rounded-2xl border-b-4 border-amber-500">
+                            <h4 class="text-3xl font-black text-amber-600 mb-1">40+ 年</h4>
+                            <p class="text-slate-800 font-bold">在地豐富工程經驗</p>
+                        </div>
+                        <div class="p-6 bg-slate-50/90 rounded-2xl border-b-4 border-amber-500">
+                            <h4 class="text-3xl font-black text-amber-600 mb-1">2-3 日</h4>
+                            <p class="text-slate-800 font-bold">訂造最快起貨速送</p>
+                        </div>
+                        <div class="p-6 bg-slate-50/90 rounded-2xl border-b-4 border-amber-500">
+                            <h4 class="text-3xl font-black text-amber-600 mb-1">一站式</h4>
+                            <p class="text-slate-800 font-bold">門市、廠房、安裝與護理</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-<div class="p-6 bg-slate-50/90 rounded-2xl border-b-4 border-amber-500">
-<h4 class="text-3xl font-black text-amber-600 mb-1">40+ 年</h4>
-<p class="text-slate-800 font-bold">在地豐富工程經驗</p>
-</div>
-<div class="p-6 bg-slate-50/90 rounded-2xl border-b-4 border-amber-500">
-<h4 class="text-3xl font-black text-amber-600 mb-1">2-3 日</h4>
-<p class="text-slate-800 font-bold">訂造最快起貨速送</p>
-</div>
-<div class="p-6 bg-slate-50/90 rounded-2xl border-b-4 border-amber-500">
-<h4 class="text-3xl font-black text-amber-600 mb-1">一站式</h4>
-<p class="text-slate-800 font-bold">門市、廠房、安裝與護理</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+        <!-- 實體門市與樣板展示 -->
+        <section id="store" class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">門市環境與石材展示</h2>
+                    <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+                    <p class="text-slate-700 font-medium">歡迎親臨元朗門市，實地挑選天然雲石、岩板、花崗岩與水磨石樣板。</p>
+                </div>
 
-<!-- 實體門市與樣板展示 -->
-<section id="store" class="py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center max-w-3xl mx-auto mb-10">
-<h2 class="text-3xl font-bold text-slate-900 mb-3">門市環境與石材展示</h2>
-<div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
-<p class="text-slate-700 font-medium">歡迎親臨元朗門市，實地挑選天然雲石、岩板、花崗岩與水磨石樣板。</p>
-</div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="store-1.jpeg" alt="門市外觀石材展板" class="w-full h-64 object-cover">
+                        <div class="p-5 text-center">
+                            <h4 class="font-bold text-slate-900 text-lg">元朗門市地舖外觀</h4>
+                            <p class="text-xs text-slate-600 font-medium mt-1">牆面展示各式麻石與雲石板材</p>
+                        </div>
+                    </div>
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="store-1.jpeg" alt="門市外觀石材展板" class="w-full h-64 object-cover">
-<div class="p-5 text-center">
-<h4 class="font-bold text-slate-900 text-lg">元朗門市地舖外觀</h4>
-<p class="text-xs text-slate-600 font-medium mt-1">牆面展示各式麻石與雲石板材</p>
-</div>
-</div>
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="store-2.jpeg" alt="門市內部精選樣板展架" class="w-full h-64 object-cover">
+                        <div class="p-5 text-center">
+                            <h4 class="font-bold text-slate-900 text-lg">精選雲石與岩板展架</h4>
+                            <p class="text-xs text-slate-600 font-medium mt-1">上百款天然及人造石材質感供選擇</p>
+                        </div>
+                    </div>
 
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="store-2.jpeg" alt="門市內部精選樣板展架" class="w-full h-64 object-cover">
-<div class="p-5 text-center">
-<h4 class="font-bold text-slate-900 text-lg">精選雲石與岩板展架</h4>
-<p class="text-xs text-slate-600 font-medium mt-1">上百款天然及人造石材質感供選擇</p>
-</div>
-</div>
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="store-3.jpeg" alt="恒發雲石品牌牌匾與HF標誌" class="w-full h-64 object-cover">
+                        <div class="p-5 text-center">
+                            <h4 class="font-bold text-slate-900 text-lg">恒發牌匾與展示牆</h4>
+                            <p class="text-xs text-slate-600 font-medium mt-1">四十年老字號 · 誠信與品質保證</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="store-3.jpeg" alt="恒發雲石品牌牌匾與HF標誌" class="w-full h-64 object-cover">
-<div class="p-5 text-center">
-<h4 class="font-bold text-slate-900 text-lg">恒發牌匾與展示牆</h4>
-<p class="text-xs text-slate-600 font-medium mt-1">四十年老字號 · 誠信與品質保證</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+        <!-- 營業範圍區塊 -->
+        <section id="services" class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">核心營業範圍</h2>
+                    <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full"></div>
+                </div>
 
-<!-- 營業範圍區塊 -->
-<section id="services" class="py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center max-w-3xl mx-auto mb-12">
-<h2 class="text-3xl font-bold text-slate-900 mb-3">核心營業範圍</h2>
-<div class="w-16 h-1 bg-amber-500 mx-auto rounded-full"></div>
-</div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="white-glass-card p-8 rounded-2xl border-t-4 border-amber-500">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-ruler-combined text-amber-600"></i> 上門度尺與專業送貨
+                        </h3>
+                        <ul class="space-y-2.5 text-slate-700 font-medium text-sm">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 專人現場精密上門度尺</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 滿額訂單提供專車包送貨服務</li>
+                        </ul>
+                    </div>
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="white-glass-card p-8 rounded-2xl border-t-4 border-amber-500">
-<h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-<i class="fa-solid fa-ruler-combined text-amber-600"></i> 上門度尺與專業送貨
-</h3>
-<ul class="space-y-2.5 text-slate-700 font-medium text-sm">
-<li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 專人現場精密上門度尺</li>
-<li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 滿額訂單提供專車包送貨服務</li>
-</ul>
-</div>
+                    <div class="white-glass-card p-8 rounded-2xl border-t-4 border-amber-500">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-boxes-packing text-amber-600"></i> 石材零售與工程輔料
+                        </h3>
+                        <ul class="space-y-2.5 text-slate-700 font-medium text-sm">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 零售各式天然雲石、麻石與瓷磚</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 雲石麻石瓷磚界碟供應</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 外牆乾掛易波仕膠水、雲石專用膠水</li>
+                        </ul>
+                    </div>
 
-<div class="white-glass-card p-8 rounded-2xl border-t-4 border-amber-500">
-<h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-<i class="fa-solid fa-boxes-packing text-amber-600"></i> 石材零售與工程輔料
-</h3>
-<ul class="space-y-2.5 text-slate-700 font-medium text-sm">
-<li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 零售各式天然雲石、麻石與瓷磚</li>
-<li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 雲石麻石瓷磚界碟供應</li>
-<li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 外牆乾掛易波仕膠水、雲石專用膠水</li>
-</ul>
-</div>
+                    <div class="white-glass-card p-8 rounded-2xl border-t-4 border-amber-500">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-screwdriver-wrench text-amber-600"></i> 地台雲石翻新與護理
+                        </h3>
+                        <ul class="space-y-2.5 text-slate-700 font-medium text-sm">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 舊雲石地台研磨去劃痕拋光</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 專業雲石晶面固化護理與防滲漏處理</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="white-glass-card p-8 rounded-2xl border-t-4 border-amber-500">
-<h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-<i class="fa-solid fa-screwdriver-wrench text-amber-600"></i> 地台雲石翻新與護理
-</h3>
-<ul class="space-y-2.5 text-slate-700 font-medium text-sm">
-<li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 舊雲石地台研磨去劃痕拋光</li>
-<li class="flex items-start gap-2"><i class="fa-solid fa-check text-amber-500 mt-1"></i> 專業雲石晶面固化護理與防滲漏處理</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
+        <!-- 常見石材好處與快速挑選指南 -->
+        <section id="stone-benefits" class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">常用石材好處與快速挑選指南</h2>
+                    <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+                    <p class="text-slate-700 font-medium">了解不同石材的物理特性與優勢，助您精準挑選最合適的工程材料。</p>
+                </div>
 
-<!-- 常見石材好處與快速挑選指南 -->
-<section id="stone-benefits" class="py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center max-w-3xl mx-auto mb-12">
-<h2 class="text-3xl font-bold text-slate-900 mb-3">常用石材好處與快速挑選指南</h2>
-<div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
-<p class="text-slate-700 font-medium">了解不同石材的物理特性與優勢，助您精準挑選最合適的工程材料。</p>
-</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- 1. 雲石 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row">
+                        <img src="benefit-1.jpg" alt="雲石 Marble" class="w-full md:w-2/5 h-64 md:h-auto object-cover shrink-0">
+                        <div class="p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="text-xl font-bold text-slate-900">1. 雲石 (Marble / 大理石)</h3>
+                                    <span class="text-xs bg-red-100 text-red-700 font-bold px-2.5 py-1 rounded">天然石材</span>
+                                </div>
+                                <p class="text-slate-600 text-xs font-semibold mb-3">以高貴優雅的自然紋理著稱，打造豪宅奢華風首選。</p>
+                                <ul class="space-y-2 text-slate-700 text-xs leading-relaxed">
+                                    <li><strong class="text-amber-800">• 獨一無二天然紋理：</strong>大自然獨家形成，質感細緻，大幅提升空間質感。</li>
+                                    <li><strong class="text-amber-800">• 質感溫潤親膚：</strong>表面觸感涼爽細滑，極具視覺震撼力。</li>
+                                    <li><strong class="text-amber-800">• 加工加工性好：</strong>易於進行雕刻、磨邊或特殊造型切割。</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800">
+                                📍 適用場景：特色牆、電視牆、玄關櫃面、浴室牆面 (建議定期密封防水)。
+                            </div>
+                        </div>
+                    </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- 1. 雲石 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row">
-<img src="benefit-1.jpg" alt="雲石 Marble" class="w-full md:w-2/5 h-64 md:h-auto object-cover shrink-0">
-<div class="p-6 flex flex-col justify-between">
-<div>
-<div class="flex items-center justify-between mb-2">
-<h3 class="text-xl font-bold text-slate-900">1. 雲石 (Marble / 大理石)</h3>
-<span class="text-xs bg-red-100 text-red-700 font-bold px-2.5 py-1 rounded">天然石材</span>
-</div>
-<p class="text-slate-600 text-xs font-semibold mb-3">以高貴優雅的自然紋理著稱，打造豪宅奢華風首選。</p>
-<ul class="space-y-2 text-slate-700 text-xs leading-relaxed">
-<li><strong class="text-amber-800">• 獨一無二天然紋理：</strong>大自然獨家形成，質感細緻，大幅提升空間質感。</li>
-<li><strong class="text-amber-800">• 質感溫潤親膚：</strong>表面觸感涼爽細滑，極具視覺震撼力。</li>
-<li><strong class="text-amber-800">• 加工加工性好：</strong>易於進行雕刻、磨邊或特殊造型切割。</li>
-</ul>
-</div>
-<div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800">
-📍 適用場景：特色牆、電視牆、玄關櫃面、浴室牆面 (建議定期密封防水)。
-</div>
-</div>
-</div>
+                    <!-- 2. 麻石 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row">
+                        <img src="benefit-2.jpg" alt="麻石 Granite" class="w-full md:w-2/5 h-64 md:h-auto object-cover shrink-0">
+                        <div class="p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="text-xl font-bold text-slate-900">2. 麻石 (Granite / 花崗岩)</h3>
+                                    <span class="text-xs bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded">天然火山岩</span>
+                                </div>
+                                <p class="text-slate-600 text-xs font-semibold mb-3">以超高硬度與極佳堅固耐用度聞名。</p>
+                                <ul class="space-y-2 text-slate-700 text-xs leading-relaxed">
+                                    <li><strong class="text-amber-800">• 極高硬度耐磨：</strong>莫氏硬度高達 6–7 級，極難被刮花損壞。</li>
+                                    <li><strong class="text-amber-800">• 極佳耐高溫：</strong>耐熱能力強，熱鍋直接放置不易燙傷石面。</li>
+                                    <li><strong class="text-amber-800">• 超強耐候性：</strong>抗酸鹼腐蝕，不受紫外線影響，極適合戶外。</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800">
+                                📍 適用場景：戶外地磚、建築外牆、高頻率繁重使用之工作檯面。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 2. 麻石 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row">
-<img src="benefit-2.jpg" alt="麻石 Granite" class="w-full md:w-2/5 h-64 md:h-auto object-cover shrink-0">
-<div class="p-6 flex flex-col justify-between">
-<div>
-<div class="flex items-center justify-between mb-2">
-<h3 class="text-xl font-bold text-slate-900">2. 麻石 (Granite / 花崗岩)</h3>
-<span class="text-xs bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded">天然火山岩</span>
-</div>
-<p class="text-slate-600 text-xs font-semibold mb-3">以超高硬度與極佳堅固耐用度聞名。</p>
-<ul class="space-y-2 text-slate-700 text-xs leading-relaxed">
-<li><strong class="text-amber-800">• 極高硬度耐磨：</strong>莫氏硬度高達 6–7 級，極難被刮花損壞。</li>
-<li><strong class="text-amber-800">• 極佳耐高溫：</strong>耐熱能力強，熱鍋直接放置不易燙傷石面。</li>
-<li><strong class="text-amber-800">• 超強耐候性：</strong>抗酸鹼腐蝕，不受紫外線影響，極適合戶外。</li>
-</ul>
-</div>
-<div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800">
-📍 適用場景：戶外地磚、建築外牆、高頻率繁重使用之工作檯面。
-</div>
-</div>
-</div>
+                    <!-- 3. 石英石 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row">
+                        <img src="benefit-3.jpg" alt="石英石 Quartz" class="w-full md:w-2/5 h-64 md:h-auto object-cover shrink-0">
+                        <div class="p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="text-xl font-bold text-slate-900">3. 石英石 (Quartz Stone)</h3>
+                                </div>
+                                <p class="text-slate-600 text-xs font-semibold mb-3">含90%以上石英晶體壓製，室內廚房檯面熱門首選。</p>
+                                <ul class="space-y-2 text-slate-700 text-xs leading-relaxed">
+                                    <li><strong class="text-amber-800">• 防刮耐磨：</strong>莫氏硬度達7級，日常刀具切劃不易留痕。</li>
+                                    <li><strong class="text-amber-800">• 高防滲透不食色：</strong>密度極高無毛細孔，醬油紅酒不易滲入。</li>
+                                    <li><strong class="text-amber-800">• 衛生安全樣式多：</strong>不吸水不易滋生細菌，色澤穩定無天然色差。</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800">
+                                📍 適用場景：廚房工作檯面、中島檯面、浴室洗手檯面。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 3. 石英石 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row">
-<img src="benefit-3.jpg" alt="石英石 Quartz" class="w-full md:w-2/5 h-64 md:h-auto object-cover shrink-0">
-<div class="p-6 flex flex-col justify-between">
-<div>
-<div class="flex items-center justify-between mb-2">
-<h3 class="text-xl font-bold text-slate-900">3. 石英石 (Quartz Stone)</h3>
-</div>
-<p class="text-slate-600 text-xs font-semibold mb-3">含90%以上石英晶體壓製，室內廚房檯面熱門首選。</p>
-<ul class="space-y-2 text-slate-700 text-xs leading-relaxed">
-<li><strong class="text-amber-800">• 防刮耐磨：</strong>莫氏硬度達7級，日常刀具切劃不易留痕。</li>
-<li><strong class="text-amber-800">• 高防滲透不食色：</strong>密度極高無毛細孔，醬油紅酒不易滲入。</li>
-<li><strong class="text-amber-800">• 衛生安全樣式多：</strong>不吸水不易滋生細菌，色澤穩定無天然色差。</li>
-</ul>
-</div>
-<div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800">
-📍 適用場景：廚房工作檯面、中島檯面、浴室洗手檯面。
-</div>
-</div>
-</div>
+                    <!-- 4. 納米石 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row">
+                        <img src="benefit-4.jpg" alt="納米石 Nano Glass" class="w-full md:w-2/5 h-64 md:h-auto object-cover shrink-0">
+                        <div class="p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="text-xl font-bold text-slate-900">4. 納米石 (Nano Glass)</h3>
+                                    <span class="text-xs bg-blue-100 text-blue-800 font-bold px-2.5 py-1 rounded">新型結晶石</span>
+                                </div>
+                                <p class="text-slate-600 text-xs font-semibold mb-3">高溫結晶燒結成型，無毛細孔之極簡風現代石材。</p>
+                                <ul class="space-y-2 text-slate-700 text-xs leading-relaxed">
+                                    <li><strong class="text-amber-800">• 完全零滲透：</strong>吸水率接近 0%，強酸強鹼與色素絕不滲入。</li>
+                                    <li><strong class="text-amber-800">• 極致純淨純白：</strong>呈現天然石材無法達到的零雜點純白質感。</li>
+                                    <li><strong class="text-amber-800">• 超高耐熱與環保：</strong>高溫燒結不含樹脂，無微量輻射，安全健康。</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800">
+                                📍 適用場景：極簡風廚房檯面、純白裝修設計、醫療或高衛生要求環境。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 4. 納米石 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row">
-<img src="benefit-4.jpg" alt="納米石 Nano Glass" class="w-full md:w-2/5 h-64 md:h-auto object-cover shrink-0">
-<div class="p-6 flex flex-col justify-between">
-<div>
-<div class="flex items-center justify-between mb-2">
-<h3 class="text-xl font-bold text-slate-900">4. 納米石 (Nano Glass)</h3>
-<span class="text-xs bg-blue-100 text-blue-800 font-bold px-2.5 py-1 rounded">新型結晶石</span>
-</div>
-<p class="text-slate-600 text-xs font-semibold mb-3">高溫結晶燒結成型，無毛細孔之極簡風現代石材。</p>
-<ul class="space-y-2 text-slate-700 text-xs leading-relaxed">
-<li><strong class="text-amber-800">• 完全零滲透：</strong>吸水率接近 0%，強酸強鹼與色素絕不滲入。</li>
-<li><strong class="text-amber-800">• 極致純淨純白：</strong>呈現天然石材無法達到的零雜點純白質感。</li>
-<li><strong class="text-amber-800">• 超高耐熱與環保：</strong>高溫燒結不含樹脂，無微量輻射，安全健康。</li>
-</ul>
-</div>
-<div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800">
-📍 適用場景：極簡風廚房檯面、純白裝修設計、醫療或高衛生要求環境。
-</div>
-</div>
-</div>
+                    <!-- 5. 人造石 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row md:col-span-2">
+                        <img src="benefit-5.jpg" alt="人造石 Solid Surface" class="w-full md:w-1/3 h-64 md:h-auto object-cover shrink-0">
+                        <div class="p-6 flex flex-col justify-between flex-grow">
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="text-xl font-bold text-slate-900">5. 人造石 (Solid Surface / 亞克力石)</h3>
+                                    <span class="text-xs bg-purple-100 text-purple-800 font-bold px-2.5 py-1 rounded">無縫複合石</span>
+                                </div>
+                                <p class="text-slate-600 text-xs font-semibold mb-3">由天然礦物粉與亞克力樹脂複合而成，具備超高塑料性與絕佳修復性。</p>
+                                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-slate-700 text-xs leading-relaxed mb-2">
+                                    <li><strong class="text-amber-800">• 完美無縫拼接：</strong>能做到超長檯面無縫連接，整體質感連貫順暢。</li>
+                                    <li><strong class="text-amber-800">• 熱彎曲造型力強：</strong>加熱後可塑造各種圓弧、一體成型洗手盆等特殊造型。</li>
+                                    <li><strong class="text-amber-800">• 易翻新修復：</strong>不慎刮花可透過打磨拋光恢復原貌，顏色豐富多變。</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800">
+                                📍 適用場景：商用吧檯、一體成型浴室櫃檯面、異形彎曲造型牆面與工作台。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- 5. 人造石 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row md:col-span-2">
-<img src="benefit-5.jpg" alt="人造石 Solid Surface" class="w-full md:w-1/3 h-64 md:h-auto object-cover shrink-0">
-<div class="p-6 flex flex-col justify-between flex-grow">
-<div>
-<div class="flex items-center justify-between mb-2">
-<h3 class="text-xl font-bold text-slate-900">5. 人造石 (Solid Surface / 亞克力石)</h3>
-<span class="text-xs bg-purple-100 text-purple-800 font-bold px-2.5 py-1 rounded">無縫複合石</span>
-</div>
-<p class="text-slate-600 text-xs font-semibold mb-3">由天然礦物粉與亞克力樹脂複合而成，具備超高塑料性與絕佳修復性。</p>
-<ul class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-slate-700 text-xs leading-relaxed mb-2">
-<li><strong class="text-amber-800">• 完美無縫拼接：</strong>能做到超長檯面無縫連接，整體質感連貫順暢。</li>
-<li><strong class="text-amber-800">• 熱彎曲造型力強：</strong>加熱後可塑造各種圓弧、一體成型洗手盆等特殊造型。</li>
-<li><strong class="text-amber-800">• 易翻新修復：</strong>不慎刮花可透過打磨拋光恢復原貌，顏色豐富多變。</li>
-</ul>
-</div>
-<div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-slate-800">
-📍 適用場景：商用吧檯、一體成型浴室櫃檯面、異形彎曲造型牆面與工作台。
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+        <!-- 常見雲石磨邊造型與適用類型 -->
+        <section id="stone-edges" class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">常見雲石磨邊造型與適用類型</h2>
+                    <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+                    <p class="text-slate-700 font-medium">不同的磨邊工藝能塑造出完全不同的空間氣質，並提升使用上的安全與實用性。</p>
+                </div>
 
-<!-- 常見雲石磨邊造型與適用類型 (固定 16:9 圖片尺寸，防止無限放大) -->
-<section id="stone-edges" class="py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center max-w-3xl mx-auto mb-10">
-<h2 class="text-3xl font-bold text-slate-900 mb-3">常見雲石磨邊造型與適用類型</h2>
-<div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
-<p class="text-slate-700 font-medium">不同的磨邊工藝能塑造出完全不同的空間氣質，並提升使用上的安全與實用性。</p>
-</div>
+                <!-- 置中集中且卡片固定寬度的 Flex 容器 -->
+                <div class="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+                    <!-- 1. 普邊 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
+                                <img src="edge-1.jpg" alt="普邊" class="max-h-full max-w-full object-contain rounded-md">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-base font-bold text-slate-900 mb-1">普邊 (直邊)</h3>
+                                <p class="text-xs text-slate-600 mb-3 leading-relaxed">邊角微倒角不刮手，保留俐落簡潔的直線線條。</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
+                                📍 適合：牆身石板、地台鋪設、牆腳線。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 置中集中且卡片固定寬度的 Flex 容器 -->
-<div class="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
-<!-- 1. 普邊 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
-<div>
-<div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
-<img src="edge-1.jpg" alt="普邊" class="max-h-full max-w-full object-contain rounded-md">
-</div>
-<div class="p-4">
-<h3 class="text-base font-bold text-slate-900 mb-1">普邊 (直邊)</h3>
-<p class="text-xs text-slate-600 mb-3 leading-relaxed">邊角微倒角不刮手，保留俐落簡潔的直線線條。</p>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
-📍 適合：牆身石板、地台鋪設、牆腳線。
-</div>
-</div>
-</div>
+                    <!-- 2. 小圓邊 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
+                                <img src="edge-2.jpg" alt="小圓邊" class="max-h-full max-w-full object-contain rounded-md">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-base font-bold text-slate-900 mb-1">小圓邊</h3>
+                                <p class="text-xs text-slate-600 mb-3 leading-relaxed">頂端微小 R 角圓潤處理，自然簡約，觸感舒適。</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
+                                📍 適合：窗檯石、廚房/浴室檯面、門檻石。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 2. 小圓邊 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
-<div>
-<div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
-<img src="edge-2.jpg" alt="小圓邊" class="max-h-full max-w-full object-contain rounded-md">
-</div>
-<div class="p-4">
-<h3 class="text-base font-bold text-slate-900 mb-1">小圓邊</h3>
-<p class="text-xs text-slate-600 mb-3 leading-relaxed">頂端微小 R 角圓潤處理，自然簡約，觸感舒適。</p>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
-📍 適合：窗檯石、廚房/浴室檯面、門檻石。
-</div>
-</div>
-</div>
+                    <!-- 3. 中圓邊 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
+                                <img src="edge-3.jpg" alt="中圓邊" class="max-h-full max-w-full object-contain rounded-md">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-base font-bold text-slate-900 mb-1">中圓邊</h3>
+                                <p class="text-xs text-slate-600 mb-3 leading-relaxed">圓弧度適中，有效減少碰撞受傷風險。</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
+                                📍 適合：餐檯面、電視櫃檯面、浴室洗手檯。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 3. 中圓邊 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
-<div>
-<div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
-<img src="edge-3.jpg" alt="中圓邊" class="max-h-full max-w-full object-contain rounded-md">
-</div>
-<div class="p-4">
-<h3 class="text-base font-bold text-slate-900 mb-1">中圓邊</h3>
-<p class="text-xs text-slate-600 mb-3 leading-relaxed">圓弧度適中，有效減少碰撞受傷風險。</p>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
-📍 適合：餐檯面、電視櫃檯面、浴室洗手檯。
-</div>
-</div>
-</div>
+                    <!-- 4. 大圓邊 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
+                                <img src="edge-4.jpg" alt="大圓邊" class="max-h-full max-w-full object-contain rounded-md">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-base font-bold text-slate-900 mb-1">大圓邊</h3>
+                                <p class="text-xs text-slate-600 mb-3 leading-relaxed">大幅度圓弧造型，視覺效果極其柔和溫潤。</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
+                                📍 適合：家庭餐檯、長者防撞檯、企缸吸水石。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 4. 大圓邊 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
-<div>
-<div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
-<img src="edge-4.jpg" alt="大圓邊" class="max-h-full max-w-full object-contain rounded-md">
-</div>
-<div class="p-4">
-<h3 class="text-base font-bold text-slate-900 mb-1">大圓邊</h3>
-<p class="text-xs text-slate-600 mb-3 leading-relaxed">大幅度圓弧造型，視覺效果極其柔和溫潤。</p>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
-📍 適合：家庭餐檯、長者防撞檯、企缸吸水石。
-</div>
-</div>
-</div>
+                    <!-- 5. 小斜邊 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
+                                <img src="edge-5.jpg" alt="小斜邊" class="max-h-full max-w-full object-contain rounded-md">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-base font-bold text-slate-900 mb-1">小斜邊</h3>
+                                <p class="text-xs text-slate-600 mb-3 leading-relaxed">45度微斜角切面，展現現代極簡時尚風采。</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
+                                📍 適合：廚房工作檯、中島檯面、現代窗檯。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 5. 小斜邊 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
-<div>
-<div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
-<img src="edge-5.jpg" alt="小斜邊" class="max-h-full max-w-full object-contain rounded-md">
-</div>
-<div class="p-4">
-<h3 class="text-base font-bold text-slate-900 mb-1">小斜邊</h3>
-<p class="text-xs text-slate-600 mb-3 leading-relaxed">45度微斜角切面，展現現代極簡時尚風采。</p>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
-📍 適合：廚房工作檯、中島檯面、現代窗檯。
-</div>
-</div>
-</div>
+                    <!-- 6. 中斜邊 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
+                                <img src="edge-6.jpg" alt="中斜邊" class="max-h-full max-w-full object-contain rounded-md">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-base font-bold text-slate-900 mb-1">中斜邊</h3>
+                                <p class="text-xs text-slate-600 mb-3 leading-relaxed">切面面積加大，強化石材厚度感與光影折射。</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
+                                📍 適合：特色牆面裝飾邊、洗手檯收邊。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 6. 中斜邊 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
-<div>
-<div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
-<img src="edge-6.jpg" alt="中斜邊" class="max-h-full max-w-full object-contain rounded-md">
-</div>
-<div class="p-4">
-<h3 class="text-base font-bold text-slate-900 mb-1">中斜邊</h3>
-<p class="text-xs text-slate-600 mb-3 leading-relaxed">切面面積加大，強化石材厚度感與光影折射。</p>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
-📍 適合：特色牆面裝飾邊、洗手檯收邊。
-</div>
-</div>
-</div>
+                    <!-- 7. 大斜邊 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
+                                <img src="edge-7.jpg" alt="大斜邊" class="max-h-full max-w-full object-contain rounded-md">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-base font-bold text-slate-900 mb-1">大斜邊</h3>
+                                <p class="text-xs text-slate-600 mb-3 leading-relaxed">顯著的大斜切面設計，富有強烈幾何藝術感。</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
+                                📍 適合：豪宅中島檯邊、玄關裝飾櫃面。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 7. 大斜邊 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
-<div>
-<div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
-<img src="edge-7.jpg" alt="大斜邊" class="max-h-full max-w-full object-contain rounded-md">
-</div>
-<div class="p-4">
-<h3 class="text-base font-bold text-slate-900 mb-1">大斜邊</h3>
-<p class="text-xs text-slate-600 mb-3 leading-relaxed">顯著的大斜切面設計，富有強烈幾何藝術感。</p>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
-📍 適合：豪宅中島檯邊、玄關裝飾櫃面。
-</div>
-</div>
-</div>
+                    <!-- 8. 法國邊 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
+                                <img src="edge-8.jpg" alt="法國邊" class="max-h-full max-w-full object-contain rounded-md">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-base font-bold text-slate-900 mb-1">法國邊</h3>
+                                <p class="text-xs text-slate-600 mb-3 leading-relaxed">古典雙階梯流線造型，展現法式古典奢華質感。</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
+                                📍 適合：古典風格餐檯、壁爐石套飾、洗手檯。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 8. 法國邊 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
-<div>
-<div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
-<img src="edge-8.jpg" alt="法國邊" class="max-h-full max-w-full object-contain rounded-md">
-</div>
-<div class="p-4">
-<h3 class="text-base font-bold text-slate-900 mb-1">法國邊</h3>
-<p class="text-xs text-slate-600 mb-3 leading-relaxed">古典雙階梯流線造型，展現法式古典奢華質感。</p>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
-📍 適合：古典風格餐檯、壁爐石套飾、洗手檯。
-</div>
-</div>
-</div>
+                    <!-- 9. 棋子邊 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
+                                <img src="edge-9.jpg" alt="棋子邊" class="max-h-full max-w-full object-contain rounded-md">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-base font-bold text-slate-900 mb-1">棋子邊</h3>
+                                <p class="text-xs text-slate-600 mb-3 leading-relaxed">上下雙圓角凸弧面，圓潤如棋子，安全美觀。</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
+                                📍 適合：門檻石、企缸擋水石、樓梯踏板。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 9. 棋子邊 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
-<div>
-<div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
-<img src="edge-9.jpg" alt="棋子邊" class="max-h-full max-w-full object-contain rounded-md">
-</div>
-<div class="p-4">
-<h3 class="text-base font-bold text-slate-900 mb-1">棋子邊</h3>
-<p class="text-xs text-slate-600 mb-3 leading-relaxed">上下雙圓角凸弧面，圓潤如棋子，安全美觀。</p>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
-📍 適合：門檻石、企缸擋水石、樓梯踏板。
-</div>
-</div>
-</div>
+                    <!-- 10. 大棋子邊 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
+                                <img src="edge-10.jpg" alt="大棋子邊" class="max-h-full max-w-full object-contain rounded-md">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-base font-bold text-slate-900 mb-1">大棋子邊 (加厚)</h3>
+                                <p class="text-xs text-slate-600 mb-3 leading-relaxed">下垂加厚包邊搭配雙圓弧，顯得極具份量感。</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
+                                📍 適合：加厚中島檯面、客廳主檯面、吧檯。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 10. 大棋子邊 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
-<div>
-<div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
-<img src="edge-10.jpg" alt="大棋子邊" class="max-h-full max-w-full object-contain rounded-md">
-</div>
-<div class="p-4">
-<h3 class="text-base font-bold text-slate-900 mb-1">大棋子邊 (加厚)</h3>
-<p class="text-xs text-slate-600 mb-3 leading-relaxed">下垂加厚包邊搭配雙圓弧，顯得極具份量感。</p>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
-📍 適合：加厚中島檯面、客廳主檯面、吧檯。
-</div>
-</div>
-</div>
+                    <!-- 11. 法國棋子邊 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
+                                <img src="edge-11.jpg" alt="法國棋子邊" class="max-h-full max-w-full object-contain rounded-md">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-base font-bold text-slate-900 mb-1">法國棋子邊</h3>
+                                <p class="text-xs text-slate-600 mb-3 leading-relaxed">結合法國邊造型與棋子圓弧，層次豐富且觸感溫潤。</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
+                                📍 適合：奢華美式/法式檯面、酒吧吧檯。
+                            </div>
+                        </div>
+                    </div>
 
-<!-- 11. 法國棋子邊 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
-<div>
-<div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
-<img src="edge-11.jpg" alt="法國棋子邊" class="max-h-full max-w-full object-contain rounded-md">
-</div>
-<div class="p-4">
-<h3 class="text-base font-bold text-slate-900 mb-1">法國棋子邊</h3>
-<p class="text-xs text-slate-600 mb-3 leading-relaxed">結合法國邊造型與棋子圓弧，層次豐富且觸感溫潤。</p>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
-📍 適合：奢華美式/法式檯面、酒吧吧檯。
-</div>
-</div>
-</div>
+                    <!-- 12. 厚法國邊 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
+                                <img src="edge-12.jpg" alt="厚法國邊" class="max-h-full max-w-full object-contain rounded-md">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="text-base font-bold text-slate-900 mb-1">厚法國邊 (加厚)</h3>
+                                <p class="text-xs text-slate-600 mb-3 leading-relaxed">加厚下垂工藝融合法式立體線條，展現極致豪宅張力。</p>
+                            </div>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
+                                📍 適合：豪華大堂檯面、高檔私人會所中島。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- 12. 厚法國邊 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-[250px] flex flex-col justify-between shrink-0">
-<div>
-<div class="w-full bg-slate-100/90 h-36 p-2 flex items-center justify-center border-b border-slate-200/60 overflow-hidden">
-<img src="edge-12.jpg" alt="厚法國邊" class="max-h-full max-w-full object-contain rounded-md">
-</div>
-<div class="p-4">
-<h3 class="text-base font-bold text-slate-900 mb-1">厚法國邊 (加厚)</h3>
-<p class="text-xs text-slate-600 mb-3 leading-relaxed">加厚下垂工藝融合法式立體線條，展現極致豪宅張力。</p>
-</div>
-</div>
-<div class="p-4 pt-0">
-<div class="bg-amber-50 p-2.5 rounded-xl border border-amber-200/60 text-xs font-bold text-amber-900">
-📍 適合：豪華大堂檯面、高檔私人會所中島。
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+        <!-- 精選工程案例展示 -->
+        <section id="cases" class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">精選工程與實景展示</h2>
+                    <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+                    <p class="text-slate-700 font-medium">展示恒發雲石近年完成的真實施工案例，品質看得見。</p>
+                </div>
 
-<!-- 精選工程案例展示 -->
-<section id="cases" class="py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center max-w-3xl mx-auto mb-10">
-<h2 class="text-3xl font-bold text-slate-900 mb-3">精選工程與實景展示</h2>
-<div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
-<p class="text-slate-700 font-medium">展示恒發雲石近年完成的真實施工案例，品質看得見。</p>
-</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- 案例 1 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="case-1.jpeg" alt="客廳背景牆" class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">客廳牆面工程</span>
+                            <h3 class="text-base font-bold text-slate-900 mb-1">客廳沙發背景牆與石材飾面</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">高質感白大理石背牆與精密對縫。</p>
+                        </div>
+                    </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- 案例 1 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-1.jpeg" alt="客廳背景牆" class="w-full h-56 object-cover">
-<div class="p-5">
-<span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">客廳牆面工程</span>
-<h3 class="text-base font-bold text-slate-900 mb-1">客廳沙發背景牆與石材飾面</h3>
-<p class="text-slate-600 text-xs leading-relaxed">高質感白大理石背牆與精密對縫。</p>
-</div>
-</div>
+                    <!-- 案例 2 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="case-2.jpeg" alt="長江精雕門牌" class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">石雕工藝</span>
+                            <h3 class="text-base font-bold text-slate-900 mb-1">精雕紅字回紋石雕門牌「長江」</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">古典回紋邊框搭配精雕紅漆大字。</p>
+                        </div>
+                    </div>
 
-<!-- 案例 2 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-2.jpeg" alt="長江精雕門牌" class="w-full h-56 object-cover">
-<div class="p-5">
-<span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">石雕工藝</span>
-<h3 class="text-base font-bold text-slate-900 mb-1">精雕紅字回紋石雕門牌「長江」</h3>
-<p class="text-slate-600 text-xs leading-relaxed">古典回紋邊框搭配精雕紅漆大字。</p>
-</div>
-</div>
+                    <!-- 案例 3 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="case-3.jpeg" alt="外牆乾掛工程" class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">外牆石材</span>
+                            <h3 class="text-base font-bold text-slate-900 mb-1">建築外牆花崗岩/麻石乾掛工程</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">外牆乾掛鋼構，安全防潮耐候。</p>
+                        </div>
+                    </div>
 
-<!-- 案例 3 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-3.jpeg" alt="外牆乾掛工程" class="w-full h-56 object-cover">
-<div class="p-5">
-<span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">外牆石材</span>
-<h3 class="text-base font-bold text-slate-900 mb-1">建築外牆花崗岩/麻石乾掛工程</h3>
-<p class="text-slate-600 text-xs leading-relaxed">外牆乾掛鋼構，安全防潮耐候。</p>
-</div>
-</div>
+                    <!-- 案例 4 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="case-4.jpeg" alt="水磨石洗手台" class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">洗手台工程</span>
+                            <h3 class="text-base font-bold text-slate-900 mb-1">水磨石風格洗手檯面工程</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">耐磨防污水磨石搭配木紋浴室櫃。</p>
+                        </div>
+                    </div>
 
-<!-- 案例 4 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-4.jpeg" alt="水磨石洗手台" class="w-full h-56 object-cover">
-<div class="p-5">
-<span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">洗手台工程</span>
-<h3 class="text-base font-bold text-slate-900 mb-1">水磨石風格洗手檯面工程</h3>
-<p class="text-slate-600 text-xs leading-relaxed">耐磨防污水磨石搭配木紋浴室櫃。</p>
-</div>
-</div>
+                    <!-- 案例 5 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="case-5.jpeg" alt="浴室包邊工程" class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">浴室裝修</span>
+                            <h3 class="text-base font-bold text-slate-900 mb-1">浴室牆面與浴缸石材包邊</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">柔和雲石搭配防水封邊工藝。</p>
+                        </div>
+                    </div>
 
-<!-- 案例 5 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-5.jpeg" alt="浴室包邊工程" class="w-full h-56 object-cover">
-<div class="p-5">
-<span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">浴室裝修</span>
-<h3 class="text-base font-bold text-slate-900 mb-1">浴室牆面與浴缸石材包邊</h3>
-<p class="text-slate-600 text-xs leading-relaxed">柔和雲石搭配防水封邊工藝。</p>
-</div>
-</div>
+                    <!-- 案例 6 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="case-6.jpeg" alt="窗檯面工程" class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">窗檯細部</span>
+                            <h3 class="text-base font-bold text-slate-900 mb-1">爵士白雲石窗檯面精細鋪設</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">精準度尺與高亮澤感防水窗檯。</p>
+                        </div>
+                    </div>
 
-<!-- 案例 6 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-6.jpeg" alt="窗檯面工程" class="w-full h-56 object-cover">
-<div class="p-5">
-<span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">窗檯細部</span>
-<h3 class="text-base font-bold text-slate-900 mb-1">爵士白雲石窗檯面精細鋪設</h3>
-<p class="text-slate-600 text-xs leading-relaxed">精準度尺與高亮澤感防水窗檯。</p>
-</div>
-</div>
+                    <!-- 案例 7 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="case-7.jpeg" alt="碎石紋水磨石櫃" class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">訂造展示櫃</span>
+                            <h3 class="text-base font-bold text-slate-900 mb-1">水磨石碎石紋特色層架展示櫃</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">客製化碎石紋包覆，展現藝術品味。</p>
+                        </div>
+                    </div>
 
-<!-- 案例 7 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-7.jpeg" alt="碎石紋水磨石櫃" class="w-full h-56 object-cover">
-<div class="p-5">
-<span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">訂造展示櫃</span>
-<h3 class="text-base font-bold text-slate-900 mb-1">水磨石碎石紋特色層架展示櫃</h3>
-<p class="text-slate-600 text-xs leading-relaxed">客製化碎石紋包覆，展現藝術品味。</p>
-</div>
-</div>
+                    <!-- 案例 8 -->
+                    <div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="case-8.jpeg" alt="黑金大理石包柱工程" class="w-full h-56 object-cover">
+                        <div class="p-5">
+                            <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">大堂/包柱工程</span>
+                            <h3 class="text-base font-bold text-slate-900 mb-1">黑金大理石柱身與藝術石牆</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">尊貴黑金雙色大理石包柱，展現大氣質感。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- 案例 8 -->
-<div class="white-glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-<img src="case-8.jpeg" alt="黑金大理石包柱工程" class="w-full h-56 object-cover">
-<div class="p-5">
-<span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded mb-2">大堂/包柱工程</span>
-<h3 class="text-base font-bold text-slate-900 mb-1">黑金大理石柱身與藝術石牆</h3>
-<p class="text-slate-600 text-xs leading-relaxed">尊貴黑金雙色大理石包柱，展現大氣質感。</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+        <!-- 聯絡我們區塊 -->
+        <section id="contact" class="py-12">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="white-glass-card p-8 sm:p-12 rounded-3xl border border-white text-center shadow-lg">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">聯絡我們 / 光臨洽談</h2>
+                    <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-8"></div>
 
-<!-- 聯絡我們區塊 -->
-<section id="contact" class="py-12">
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="white-glass-card p-8 sm:p-12 rounded-3xl border border-white text-center shadow-lg">
-<h2 class="text-3xl font-bold text-slate-900 mb-4">聯絡我們 / 光臨洽談</h2>
-<div class="w-16 h-1 bg-amber-500 mx-auto rounded-full mb-8"></div>
+                    <div class="mb-8 p-5 bg-amber-50 rounded-2xl border border-amber-200 text-slate-800 text-left max-w-2xl mx-auto">
+                        <p class="font-extrabold text-amber-900 text-base mb-1">📍 新地址（10月搬遷）：</p>
+                        <p class="text-base font-bold text-slate-900">新界元朗合益路 69 號金堂樓地下</p>
+                        <p class="text-xs text-slate-500">(原舊址：元朗合益路 68 號)</p>
+                    </div>
 
-<div class="mb-8 p-5 bg-amber-50 rounded-2xl border border-amber-200 text-slate-800 text-left max-w-2xl mx-auto">
-<p class="font-extrabold text-amber-900 text-base mb-1">📍 新地址（10月搬遷）：</p>
-<p class="text-base font-bold text-slate-900">新界元朗合益路 69 號金堂樓地下</p>
-<p class="text-xs text-slate-500">(原舊址：元朗合益路 68 號)</p>
-</div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-2xl mx-auto mb-10 text-slate-800 font-bold">
+                        <p class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-red-600 text-xl w-6"></i>
+                            <span>門市電話：<a href="tel:85222530490" class="hover:text-red-600">(852) 2253 0490</a></span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-emerald-600 text-2xl w-6"></i>
+                            <span>WhatsApp：<a href="https://wa.me/85260389474" target="_blank" class="hover:text-emerald-600">(852) 6038 9474</a></span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="fa-solid fa-mobile-screen text-slate-600 text-xl w-6"></i>
+                            <span>備用聯絡：<a href="tel:85293109093" class="hover:text-slate-900">(852) 9310 9093</a></span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-amber-600 text-xl w-6"></i>
+                            <span>電郵地址：<a href="mailto:hfltd@yahoo.com.hk" class="hover:text-amber-600">hfltd@yahoo.com.hk</a></span>
+                        </p>
+                    </div>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-2xl mx-auto mb-10 text-slate-800 font-bold">
-<p class="flex items-center gap-3">
-<i class="fa-solid fa-phone text-red-600 text-xl w-6"></i>
-<span>門市電話：<a href="tel:85222530490" class="hover:text-red-600">(852) 2253 0490</a></span>
-</p>
-<p class="flex items-center gap-3">
-<i class="fa-brands fa-whatsapp text-emerald-600 text-2xl w-6"></i>
-<span>WhatsApp：<a href="https://wa.me/85260389474" target="_blank" class="hover:text-emerald-600">(852) 6038 9474</a></span>
-</p>
-<p class="flex items-center gap-3">
-<i class="fa-solid fa-mobile-screen text-slate-600 text-xl w-6"></i>
-<span>備用聯絡：<a href="tel:85293109093" class="hover:text-slate-900">(852) 9310 9093</a></span>
-</p>
-<p class="flex items-center gap-3">
-<i class="fa-solid fa-envelope text-amber-600 text-xl w-6"></i>
-<span>電郵地址：<a href="mailto:hfltd@yahoo.com.hk" class="hover:text-amber-600">hfltd@yahoo.com.hk</a></span>
-</p>
-</div>
+                    <div class="pt-2">
+                        <a href="https://wa.me/85260389474" target="_blank" class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-8 py-4 rounded-2xl shadow-lg transition-all text-xl">
+                            <i class="fa-brands fa-whatsapp text-3xl"></i> 點擊此處立即 WhatsApp 聯絡我們
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<div class="pt-2">
-<a href="https://wa.me/85260389474" target="_blank" class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-8 py-4 rounded-2xl shadow-lg transition-all text-xl">
-<i class="fa-brands fa-whatsapp text-3xl"></i> 點擊此處立即 WhatsApp 聯絡我們
-</a>
-</div>
-</div>
-</div>
-</section>
-</main>
+    <!-- 頁尾 -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm space-y-2">
+            <p class="text-slate-300 font-bold">恒發雲石工程有限公司 Hang Fat Marble Engineering Co., Ltd.</p>
+            <p class="text-xs text-slate-500">© 2026 版權所有 · 元朗合益路69號金堂樓地下 · 電話：(852) 2253 0490</p>
+        </div>
+    </footer>
 
-<!-- 頁尾 -->
-<footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm space-y-2">
-<p class="text-slate-300 font-bold">恒發雲石工程有限公司 Hang Fat Marble Engineering Co., Ltd.</p>
-<p class="text-xs text-slate-500">© 2026 版權所有 · 元朗合益路69號金堂樓地下 · 電話：(852) 2253 0490</p>
-</div>
-</footer>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-<script>
-const menuBtn = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-
-menuBtn.addEventListener('click', () => {
-mobileMenu.classList.toggle('hidden');
-});
-</script>
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
